@@ -1,15 +1,17 @@
-version: "3.9"
+version: "2"
 
 services:
   monitor:
     build: monitor
-    command: python3 /myscript/monitor_eventos.py /workdir
     volumes:
       - data-volume:/workdir
   generador:
     build: generador
     volumes:
       - data-volume:/workdir
+
+  redis:
+    image: "redis:alpine"
 
 volumes:
   data-volume:
