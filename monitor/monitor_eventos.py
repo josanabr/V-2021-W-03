@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import fnmatch
 import os
 import redis
@@ -13,7 +12,7 @@ else:
 
 if not os.path.isdir(dirpath):
   print("%s no es un directorio"%(dirpath))
-  os.exit(2)
+  os._exit(2)
 print("Directorio a monitorear -> %s"%(dirpath))
 os.chdir(dirpath)
 while True:
