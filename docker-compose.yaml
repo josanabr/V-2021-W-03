@@ -3,14 +3,23 @@ version: "3.9"
 services:
   monitor:
     build: monitor
-    command: python3 /myscript/monitor_eventos.py /workdir
     volumes:
       - data-volume:/workdir
+    networks:
+      - monredis
+
   generador:
     build: generador
     volumes:
       - data-volume:/workdir
 
+  redis:
+    image: "redis:alpine"
+    networks:
+      - monredis
+
 volumes:
   data-volume:
-   
+
+networks:
+  monredis: 
