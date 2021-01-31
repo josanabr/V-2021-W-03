@@ -54,6 +54,6 @@ Ahora se encuentra dentro del contenedor que está corriendo la base de datos *R
 Ejecute el comando:
 
 ```
-redis-cli monitorº
+redis-cli monitor
 ```
 
