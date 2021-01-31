@@ -57,3 +57,17 @@ Ejecute el comando:
 redis-cli monitor
 ```
 
+---
+
+Después de ejecutar los tres comandos usted debería ver algo como lo siguiente:
+
+![](figuras/ejecucion.png "Ejecucion del aplicativo")
+
+---
+
+Para detener la ejecución del aplicativo, digite `ctrl-C` en la terminal donde corrió el comando `docker-compose up`. 
+Finalmente ejecute el comando:
+
+```
+docker-compose down
+```
